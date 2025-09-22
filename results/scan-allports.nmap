@@ -1,7 +1,7 @@
 # Nmap 7.98 scan initiated: 2025-09-22 11:50 +0530
-# Full TCP port scan of 192.168.1.x
+# Full TCP port scan of 192.x.x.x
 
-Nmap scan report for 192.168.1.x
+Nmap scan report for 192.x.x.x
 Host is up (0.000061s latency).
 Not shown: 65523 closed tcp ports (reset)
 PORT      STATE    SERVICE
