@@ -1,0 +1,56 @@
+# Nmap Quick Reference & NSE Basics
+
+A compact, practical guide to Nmap — installation, common scan types, examples, NSE (Nmap Scripting Engine) usage, and a tiny example NSE script.
+
+---
+
+## What is Nmap?
+Nmap (Network Mapper) is an open-source tool for network discovery and security auditing.  
+It finds hosts, open ports, services, versions, OS fingerprints, and can run scripts to check for common issues.
+
+---
+
+## Install
+Download the installer from [nmap.org] or use your package manager.  
+Verify installation: nmap --version
+
+##Basic concepts / results
+
+Open — service accepting connections on that port.
+Closed — reachable but no service listening.
+Filtered — packet filtering (firewall) is blocking probes.
+Host up/down — whether host responded to probes (ICMP/TCP/etc).
+
+##Common scan types (quick cheat)
+
+-sS — TCP SYN (stealth) scan (fast, needs raw sockets/root).
+-sT — TCP connect() (no raw sockets; slower; used if not root).
+-sU — UDP scan (slower, useful for DNS, SNMP).
+-sV — Service/version detection.
+-O — OS detection.
+-A — Aggressive; includes -sV -O + scripts + traceroute.
+-p <ports> — Port selection: 80, 1-1000, - for all -p-.
+-Pn — Skip host discovery (treat host as up).
+-T0..T5 — Timing template (0 slowest / 5 fastest). -T4 common for LAN.
+--open — show only open ports.
+-oN/-oX/-oG/-oA — Save output: normal, XML, grepable, all formats.
+
+##Useful examples
+
+Scan single host, top 1000 ports: nmap 192.168.1.10
+Stealth + version detect + show only open: sudo nmap -sS -sV --open 192.168.1.10 -T4
+Scan full TCP port range: sudo nmap -p- 192.168.1.10
+Quick UDP scan for some common ports: sudo nmap -sU -p 53,67,68,69,123 192.168.1.10 -T3
+Aggressive scan (more noisy): sudo nmap -A 192.168.1.0/24 -T4
+Skip ping (useful when ICMP blocked): sudo nmap -Pn 10.0.0.5 -p 22,80 -sV
+Save outputs in multiple formats: sudo nmap -sS -sV 192.168.1.0/24 -oA lan_scan              
+                                  This produces lan_scan.nmap, lan_scan.xml, lan_scan.gnmap.
+
+##Using NSE (Nmap Scripting Engine)
+NSE scripts can detect vulnerabilities, misconfigurations, brute-force, etc.
+
+List installed scripts (path may vary by OS; common Linux path shown):
+List scripts: ls /usr/share/nmap/scripts/ (path varies)
+
+Run specific script: sudo nmap --script=http-title -p80 192.168.1.10
+Run categories (vuln, auth, discovery): sudo nmap --script=vuln 192.168.1.10
