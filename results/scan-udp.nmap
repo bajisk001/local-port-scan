@@ -1,0 +1,16 @@
+# Nmap 7.98 UDP scan initiated: 2025-09-22 11:51 +0530
+
+Nmap scan report for 192.168.158.59
+Host is up (0.00043s latency).
+Not shown: 992 closed udp ports (port-unreach)
+PORT     STATE         SERVICE
+137/udp  open|filtered netbios-ns
+138/udp  open|filtered netbios-dgm
+1900/udp open|filtered upnp
+3702/udp open|filtered ws-discovery
+4500/udp open|filtered nat-t-ike
+5050/udp open|filtered mmcc
+5353/udp open|filtered zeroconf
+5355/udp open|filtered llmnr
+
+Nmap done: 256 IP addresses (1 host up) scanned in 12.00 seconds
