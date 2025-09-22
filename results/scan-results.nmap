@@ -1,7 +1,7 @@
 # Nmap 7.98 scan initiated: 2025-09-22 11:45 +0530
-# SYN scan of 192.168.158.0/24
+# SYN scan of 192.x.x.x/24
 
-Nmap scan report for 192.168.158.59
+Nmap scan report for 192.x.x.x
 Host is up (0.00035s latency).
 Not shown: 996 closed tcp ports (reset)
 PORT     STATE SERVICE
