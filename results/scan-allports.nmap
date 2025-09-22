@@ -1,0 +1,21 @@
+# Nmap 7.98 scan initiated: 2025-09-22 11:50 +0530
+# Full TCP port scan of 192.168.158.59
+
+Nmap scan report for 192.168.158.59
+Host is up (0.000061s latency).
+Not shown: 65523 closed tcp ports (reset)
+PORT      STATE    SERVICE
+135/tcp   open     msrpc
+137/tcp   filtered netbios-ns
+139/tcp   open     netbios-ssn
+445/tcp   open     microsoft-ds
+5040/tcp  open     unknown
+5357/tcp  open     wsdapi
+49664/tcp open     unknown
+49665/tcp open     unknown
+49666/tcp open     unknown
+49667/tcp open     unknown
+49668/tcp open     unknown
+49670/tcp open     unknown
+
+Nmap done: 256 IP addresses (1 host up) scanned in 12.57 seconds
