@@ -1,6 +1,6 @@
 # Nmap 7.98 UDP scan initiated: 2025-09-22 11:51 +0530
 
-Nmap scan report for 192.168.158.59
+Nmap scan report for 192.x.x.x
 Host is up (0.00043s latency).
 Not shown: 992 closed udp ports (port-unreach)
 PORT     STATE         SERVICE
