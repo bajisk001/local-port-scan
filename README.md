@@ -5,7 +5,7 @@ Discover open ports and services on devices in my local network to understand ne
 
 ## Tools used
 - Nmap 7.98
-- (Optional) Wireshark for packet capture
+- Wireshark for packet capture
 
 ## Scans performed
 - Host discovery: `nmap -sn 192.168.158.0/24`
