@@ -2,12 +2,12 @@
 **Scan date:** 2025-09-22
 
 ## Network scanned
-CIDR: `192.168.158.0/24`  
-Discovered live hosts: `192.168.158.59`
+CIDR: `192.x.x.0/24`  
+Discovered live hosts: `192.x.x.0`
 
 ---
 
-## 192.168.158.59
+## 192.x.x.0
 - **Host is up** (low latency).
 - **Open TCP ports found**:
   - `135/tcp` — msrpc (Microsoft RPC)
