@@ -8,13 +8,13 @@ Discover open ports and services on devices in my local network to understand ne
 - Wireshark for packet capture
 
 ## Scans performed
-- Host discovery: `nmap -sn 192.168.158.0/24`
-- TCP SYN + service scan: `nmap -sS -sV 192.168.158.0/24`
-- Full port scan (single host): `nmap -p- 192.168.158.59`
-- UDP scan: `sudo nmap -sU 192.168.158.59`
+- Host discovery: `nmap -sn 192.x.x.0/24`
+- TCP SYN + service scan: `nmap -sS -sV 192.x.x.0/24`
+- Full port scan (single host): `nmap -p- 192.x.x.0`
+- UDP scan: `sudo nmap -sU 192.x.x.0`
 
 ## Key findings (summary)
-- Live host: `192.168.158.59`
+- Live host: `192.x.x.0`
 - Important open ports: `135/tcp`, `139/tcp`, `445/tcp`, `5357/tcp`, multiple ephemeral RPC ports; several UDP discovery ports.
 - The host appears to be a Windows machine with SMB and RPC services enabled.
 
@@ -38,4 +38,3 @@ Discover open ports and services on devices in my local network to understand ne
 3. Run `sudo nmap -sS -sV <cidr> -oA results/full-scan` to discover services.
 4. For deep dive on a host, run `sudo nmap -p- <ip> -oN results/allports.nmap` and `sudo nmap -sU <ip> -oN results/udp.nmap`.
 
-**DO NOT** run scans on networks you do not own or have permission to test.
