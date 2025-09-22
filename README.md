@@ -26,12 +26,11 @@ Discover open ports and services on devices in my local network to understand ne
 
 ## Files included
 - `results/scan-results.nmap`
-- `results/scan-192-168-158-59-allports.nmap`
-- `results/scan-192-168-158-59-udp.nmap`
+- `results/scan-allports.nmap`
+- `results/scan-udp.nmap`
 - `host_summary.md`
 - `interview_answers.md`
-- `screenshots/` (optional)
-- `pcaps/` (optional)
+- `pcaps/`
 
 ## How to reproduce (only on your own network)
 1. Identify your local CIDR using `ipconfig` / `ip addr`.
